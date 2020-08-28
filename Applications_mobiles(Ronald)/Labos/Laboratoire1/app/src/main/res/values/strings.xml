@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Laboratoire1</string>
+    <string name="votre_nom">Gabriel Marrero</string>
+    <string name="message_textView_img"> Ceci est une zone de texte avec 4 images</string>
+    <item name="myEdText" type="id" />
+    <item name="btnAfficher" type="id" />
 </resources>
