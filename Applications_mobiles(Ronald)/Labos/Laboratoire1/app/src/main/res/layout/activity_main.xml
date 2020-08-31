@@ -5,6 +5,7 @@
     android:id="@+id/layoutBase"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F8ECEC"
     tools:context=".MainActivity">
 
     <TextView
@@ -32,10 +33,10 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
 
-        android:background="#FF3F51B5"
+        android:background="@color/colorPrimaryDark"
         android:drawableStart="@drawable/ic_launcher_foreground"
-        android:drawableEnd="@drawable/ic_launcher_foreground"
         android:drawableTop="@drawable/ic_launcher_foreground"
+        android:drawableEnd="@drawable/ic_launcher_foreground"
         android:drawableBottom="@drawable/ic_launcher_foreground"
 
         android:drawableTint="@color/colorAccent"
@@ -49,7 +50,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.12"
+        app:layout_constraintVertical_bias="0.02"
         tools:text="@string/message_textView_img" />
 
     <Button
@@ -57,14 +58,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Afficher"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="429dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.50"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.70"
-        />
+        app:layout_constraintBottom_toTopOf="@+id/textView1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_img" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
