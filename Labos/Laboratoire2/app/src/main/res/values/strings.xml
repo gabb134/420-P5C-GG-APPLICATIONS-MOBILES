@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Laboratoire2</string>
+    <string name="TextView">Cycle de vie d\'une activité et intentions</string>
+    <string name="button">APPEL À FINISH</string>
+    <string name="TextViewChangerOrientiation">Changer l\'orientation de l\'écran pour changer la couleur de la vue. Recommencer en ayant sélectionner la case à cocher ci-dessous.</string>
+    <string name="CheckBox">Sauvegarder er restaurer la couleur actuelle</string>
+    <string name="buttonExplicite">APPUYER POUR LANCER UNE ACTIVITÉ EN UTILISANT UNE INTENTION EXPLICITE</string>
+    <string name="TextViewDestinataireActivity">Ceci est l’activité destinataire. Appuyer sur la touche retour pour revenir à l’activité appelante</string>
+    <string name="buttonRes">APPUYER POUR LANCER UNE ACTIVITÉ (EXPLICITE) QUI RETOURNE UN RÉSULTAT</string>
+    <string name="TextView4">Appuyez sur le button Résultat pour retourner RESULT_OK avec des données ou appuyer sur la touche Retour pour retourner le code RESULT_CANCEL</string>
+    <string name="buttonResultat">RÉSULTAT</string>
+    <string name="title_activity_destinataire_res">Activité destinataire avec résultat</string>
+</resources>
