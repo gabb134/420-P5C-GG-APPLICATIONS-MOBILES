@@ -3,6 +3,7 @@ package ca.qc.godin.laboratoire2
 import android.app.Activity
 import android.content.Intent
 import android.graphics.drawable.ColorDrawable
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.PersistableBundle
@@ -106,6 +107,20 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             else -> super.onActivityResult(requestCode, resultCode, data)
         }
+    }
+    fun onClickButtonAction1(view: View) {
+        val intent = Intent("ca.qc.cgodin.laboratoire2.ACTION1")
+        intent.addCategory("ca.qc.cgodin.laboratoire2.CATEGORIE1")
+        startActivity(intent)
+    }
+    fun onClickButtonAction2(view: View) {
+        val intent = Intent("ca.qc.cgodin.laboratoire2.ACTION2")
+        startActivity(intent)
+    }
+    fun onClickButtonActionView(view: View) {
+        val intent = Intent(Intent.ACTION_VIEW)
+        intent.data = Uri.parse("http://www.cgodin.qc.ca")
+        startActivity(intent)
     }
 
 

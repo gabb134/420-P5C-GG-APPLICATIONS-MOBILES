@@ -9,10 +9,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DestinataireResActivity"
-            android:label="@string/title_activity_destinataire_res" >
-
+        <activity android:name=".DestinataireImpliciteActivity"
+            android:label="@string/title_activity_destinataire_implicite">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="ca.qc.cgodin.laboratoire2.ACTION1" />
+                <category android:name="ca.qc.cgodin.laboratoire2.CATEGORIE1" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="ca.qc.cgodin.laboratoire2.ACTION2" />
+            </intent-filter>
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http"/>
+            </intent-filter>
         </activity>
+        <activity
+            android:name=".DestinataireResActivity"
+            android:label="@string/title_activity_destinataire_res"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,7 +35,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DestinataireActivity"/>
+        <activity android:name=".DestinataireActivity"
+            android:label="@string/title_activity_destinataire"/>
     </application>
 
 </manifest>
+
+
+
+

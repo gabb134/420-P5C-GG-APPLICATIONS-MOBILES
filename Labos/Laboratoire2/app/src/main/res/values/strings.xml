@@ -10,4 +10,11 @@
     <string name="TextView4">Appuyez sur le button Résultat pour retourner RESULT_OK avec des données ou appuyer sur la touche Retour pour retourner le code RESULT_CANCEL</string>
     <string name="buttonResultat">RÉSULTAT</string>
     <string name="title_activity_destinataire_res">Activité destinataire avec résultat</string>
+    <string name="TextView6">Utiliser les boutons suivants pour lancer des activités implicites</string>
+    <string name="ACTION1">ACTION1</string>
+    <string name="ACTION2">ACTION2</string>
+    <string name="ACTION_VIEW">ACTION_VIEW</string>
+    <string name="TextView7">Activité Destinataire implicite</string>
+    <string name="title_activity_destinataire_implicite">Activité Destinataire implicite</string>
+    <string name="title_activity_destinataire">Activité Destinataire</string>
 </resources>
