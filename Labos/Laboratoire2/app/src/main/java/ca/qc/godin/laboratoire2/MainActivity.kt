@@ -1,5 +1,7 @@
 package ca.qc.godin.laboratoire2
 
+import android.app.Activity
+import android.content.Intent
 import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,12 +12,7 @@ import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlin.random.Random
 
-class DestinataireActivity : AppCompatActivity() {
-    public override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_destinataire)
-    }
-}
+
 
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -32,7 +29,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btnFinish.setOnClickListener { finish() }
         mCouleur = Random(System.currentTimeMillis()).nextInt()
         btnExplicite.setOnClickListener(this)
-
+        btnRes.setOnClickListener (this)
     }
     override fun onStart() {
         super.onStart()
@@ -81,9 +78,36 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     }
 
-    override fun onClick(p0: View?) {
-        TODO("Not yet implemented")
+    override fun onClick(view: View?) {
+        when(view){
+            btnExplicite ->{
+                val intent = Intent(this@MainActivity, DestinataireActivity::class.java)
+                startActivity(intent)
+            }
+            btnRes ->{
+                val intent = Intent(this, DestinataireResActivity::class.java)
+                startActivityForResult(intent, 1)
+            }
+        }
+
     }
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        Log.i("MainActivity ", "dans ${object {}.javaClass.enclosingMethod.name}")
+        when (requestCode) {
+            1 -> {
+                val resTxt = if (resultCode == Activity.RESULT_OK) {
+                    "RESULT_OK " + DestinataireResActivity.CLE1 + "= " +
+                            data?.getStringExtra(DestinataireResActivity.CLE1) + " " +
+                            DestinataireResActivity.CLE2 + "= " +
+                            data?.getBooleanExtra(DestinataireResActivity.CLE2, false)
+                } else
+                    "RESULT_CANCELED"
+                Toast.makeText(this, resTxt, Toast.LENGTH_LONG).show()
+            }
+            else -> super.onActivityResult(requestCode, resultCode, data)
+        }
+    }
+
 
 
 }
