@@ -7,4 +7,6 @@
     <string name="rbDeuxDollars">2$</string>
     <string name="rbCinqDollars">5$</string>
     <string name="cbCasseCou">Casse-cou</string>
+    <string name="Ajoutercentdollars">Pour ajouter 100$</string>
+    <string name="CodeSecret">Entrer votre code secret</string>
 </resources>
