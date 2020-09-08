@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">Laboratoire3</string>
     <string name="title_activity_main">Labo3: Super machine à sous</string>
-    <string name="Actifs">Vos actifs : 100$</string>
+    <string name="Actifs">Vos actifs : </string>
+    <string name="ActifsDeux"></string>
     <string name="boutonJouer">JOUER</string>
     <string name="rbUnDollar">1$</string>
     <string name="rbDeuxDollars">2$</string>

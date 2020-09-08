@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/txtArgent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Actifs"
@@ -32,43 +32,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.451" />
-
-    <RadioButton
-        android:id="@+id/rbUnDollar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="304dp"
-        android:text="@string/rbUnDollar"
-        android:textSize="32sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.351" />
-
-    <RadioButton
-        android:id="@+id/rbCinqDollars"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/rbCinqDollars"
-        android:textSize="32sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.116"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <RadioButton
-        android:id="@+id/rbDeuxDollars"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/rbDeuxDollars"
-        android:textSize="32sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.116"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.425" />
 
     <CheckBox
         android:id="@+id/cbCasseCou"
@@ -154,4 +117,52 @@
             android:layout_weight="1"
             app:srcCompat="@drawable/windows" />
     </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/rGroup"
+        android:layout_width="110dp"
+        android:layout_height="223dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/rbUnDollar"
+            android:layout_width="87dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="304dp"
+            android:checked="true"
+            android:text="@string/rbUnDollar"
+            android:textSize="32sp" />
+
+        <RadioButton
+            android:id="@+id/rbDeuxDollars"
+            android:layout_width="87dp"
+            android:layout_height="wrap_content"
+            android:text="@string/rbDeuxDollars"
+            android:textSize="32sp" />
+
+        <RadioButton
+            android:id="@+id/rbCinqDollars"
+            android:layout_width="87dp"
+            android:layout_height="wrap_content"
+            android:text="@string/rbCinqDollars"
+            android:textSize="32sp" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txtActifs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ActifsDeux"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
 </androidx.constraintlayout.widget.ConstraintLayout>
