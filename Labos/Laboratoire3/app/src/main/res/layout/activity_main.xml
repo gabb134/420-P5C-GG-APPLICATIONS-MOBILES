@@ -38,13 +38,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:onClick="onclickCasseCous"
         android:text="@string/cbCasseCou"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.865"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.54" />
+        app:layout_constraintVertical_bias="0.558" />
 
     <TextView
         android:id="@+id/textView2"
@@ -78,6 +79,7 @@
         android:layout_height="52dp"
         android:ems="10"
         android:inputType="textPassword"
+        android:onClick="onClickCodeSecret"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.914"
@@ -134,6 +136,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="304dp"
             android:checked="true"
+            android:onClick="radio_button_click"
             android:text="@string/rbUnDollar"
             android:textSize="32sp" />
 
@@ -141,6 +144,7 @@
             android:id="@+id/rbDeuxDollars"
             android:layout_width="87dp"
             android:layout_height="wrap_content"
+            android:onClick="radio_button_click"
             android:text="@string/rbDeuxDollars"
             android:textSize="32sp" />
 
@@ -148,6 +152,7 @@
             android:id="@+id/rbCinqDollars"
             android:layout_width="87dp"
             android:layout_height="wrap_content"
+            android:onClick="radio_button_click"
             android:text="@string/rbCinqDollars"
             android:textSize="32sp" />
 

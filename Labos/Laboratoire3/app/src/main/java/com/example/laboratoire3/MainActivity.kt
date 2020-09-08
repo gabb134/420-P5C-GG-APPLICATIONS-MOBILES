@@ -27,20 +27,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         R.drawable.windows
     )
     var intCodeSecet: Int = 123;
-    var intActifs: Int = 100;
+    var intActifs: Int = 10;
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        //initialisation des imageviews
-        //  val constraintLayout = findViewById(R.id.imageView1) as ConstraintLayout
-        //val imageViewUn = ImageView(this)
-        //imageViewUn.setImageResource(R.drawable.androidlogo)
-        // constraintLayout.addView(imageViewUn)
-        // val constraintLayout = findViewById(R.id.imageView1) as ImageView
-        //  val imageView = ImageView(this)
-        //  imageView.setImageResource(R.drawable.androidlogo)
-        //   constraintLayout.setImageDrawable(imageView)
 
         txtActifs.text = intActifs.toString() + "$"
 
@@ -53,15 +44,53 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
         )
 
+    }
+
+    fun onClickCodeSecret(view: View){
+        val action = intent.action;
+        var binCodeSecret : Boolean = false;
+        if(editTextTextPassword2.text.toString()=="123"){
+            Toast.makeText(
+                applicationContext, "Code secret est bon!",
+                Toast.LENGTH_SHORT
+            ).show()
+            Log.i(
+                action,
+                " Code secret : ${editTextTextPassword2.text}"
+            )
+            intActifs += 100;
+            txtActifs.text = intActifs.toString() +"$"
+            editTextTextPassword2.text.clear();
+
+        }else{
+            Toast.makeText(
+                applicationContext, "Mauvais code secret",
+                Toast.LENGTH_SHORT
+            ).show()
+            editTextTextPassword2.text.clear();
+        }
+        if(intActifs>5){
+            btnJouer.isEnabled = true;
+            rbUnDollar.isEnabled = true;
+            rbDeuxDollars.isEnabled = true;
+            rbCinqDollars.isEnabled = true;
+        }
 
     }
+    fun onclickCasseCous(view: View){
+
+    }
+
+
 
     override fun onClick(view: View?) {
         when (view) {
             btnJouer -> {
                 // faire apparaitre les images aléatoirement...
-
                 val action = intent.action;
+
+
+
                 //  Toast.makeText(this, " Vous avez cliquer le button jouer qui se trouve dans: " + action, Toast.LENGTH_LONG).show();
                 var ran = Random();
                 var number1 = ran.nextInt(10)
@@ -75,75 +104,84 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 if (id != 1) {
                     val radio: RadioButton = findViewById(id)
 
+
+
                     if (radio.text == "1$") {//pour une mise de 1$
-                        Toast.makeText(
-                            applicationContext, "Mise de 1$",
-                            Toast.LENGTH_SHORT
-                        ).show()
+                     //   Toast.makeText(
+                          //  applicationContext, "Mise de 1$",
+                        //    Toast.LENGTH_SHORT
+                      //  ).show()
                         //Log.i( action, " Numero aléatoire : ${lstImage[number1]}  et ${lstImage[number2]}");
                         // dblActifs = dblActifs+1 ;
+
                         if (lstImage[number1] == lstImage[number2] && lstImage[number1] == lstImage[number3] && lstImage[number3] == lstImage[number2]) {
                             intActifs += 25;
                             Log.i(action, " 3 pareils, valeurs de intActifs : ${intActifs}")
+                            Toast.makeText(applicationContext, "Gangné ${25}$",Toast.LENGTH_SHORT).show()
                         } else if (lstImage[number1] == lstImage[number2] || lstImage[number1] == lstImage[number3] || lstImage[number3] == lstImage[number2]) {
                             intActifs += 1;
-                            Log.i(
-                                action,
-                                " Au moins 2 pareils, valeurs de intActifs : ${intActifs}"
-                            )
+                            Log.i(action," Au moins 2 pareils, valeurs de intActifs : ${intActifs}")
+                            Toast.makeText(applicationContext, "Gangné ${1}$",Toast.LENGTH_SHORT).show()
                         } else {
                             Log.i(action, " Aucun pareil, valeurs de intActifs : ${intActifs}")
                             intActifs -= 1;
+                        //    Toast.makeText(applicationContext, "Perdu ${1}$",Toast.LENGTH_SHORT).show()
                         }
 
 
                     } else if (radio.text == "2$") { //pour une mise de 2$
-                        Toast.makeText(
-                            applicationContext, "Mise de 2$",
-                            Toast.LENGTH_SHORT
-                        ).show()
-
                         if (lstImage[number1] == lstImage[number2] && lstImage[number1] == lstImage[number3] && lstImage[number3] == lstImage[number2]) {
                             intActifs += 50;
                             Log.i(action, " 3 pareils, valeurs de intActifs : ${intActifs}")
+                            Toast.makeText(applicationContext, "Gangné ${50}$",Toast.LENGTH_SHORT).show()
                         } else if (lstImage[number1] == lstImage[number2] || lstImage[number1] == lstImage[number3] || lstImage[number3] == lstImage[number2]) {
                             intActifs += 2;
-                            Log.i(
-                                action,
-                                " Au moins 2 pareils, valeurs de intActifs : ${intActifs}"
-                            )
+                            Log.i(action," Au moins 2 pareils, valeurs de intActifs : ${intActifs}")
+                            Toast.makeText(applicationContext, "Gangné ${2}$",Toast.LENGTH_SHORT).show()
                         } else {
                             Log.i(action, " Aucun pareil, valeurs de intActifs : ${intActifs}")
                             intActifs -= 2;
+                          //  Toast.makeText(applicationContext, "Perdu ${2}$",Toast.LENGTH_SHORT).show()
                         }
 
                     } else {//pour une mise de 5$
-                        Toast.makeText(
-                            applicationContext, "Mise de 5$",
-                            Toast.LENGTH_SHORT
-                        ).show()
+
                         if (lstImage[number1] == lstImage[number2] && lstImage[number1] == lstImage[number3] && lstImage[number3] == lstImage[number2]) {
                             intActifs += 250;
                             Log.i(action, " 3 pareils, valeurs de intActifs : ${intActifs}")
+                               Toast.makeText(applicationContext, "Gangné ${250}$",Toast.LENGTH_SHORT).show()
                         } else if (lstImage[number1] == lstImage[number2] || lstImage[number1] == lstImage[number3] || lstImage[number3] == lstImage[number2]) {
                             intActifs += 5;
-                            Log.i(
-                                action,
-                                " Au moins 2 pareils, valeurs de intActifs : ${intActifs}"
-                            )
+                            Log.i(action," Au moins 2 pareils, valeurs de intActifs : ${intActifs}")
+                            Toast.makeText(applicationContext, "Gangné ${5}$",Toast.LENGTH_SHORT).show()
                         } else {
                             Log.i(action, " Aucun pareil, valeurs de intActifs : ${intActifs}")
                             intActifs -= 5;
+                           // Toast.makeText(applicationContext, "Perdu ${5}$",Toast.LENGTH_SHORT).show()
                         }
                     }
                     //Toast.makeText(applicationContext,"On button click : ${radio.text}",
                     //   Toast.LENGTH_SHORT).show()
-                } else {
-                    Toast.makeText(
-                        applicationContext, "On button click : nothing selected",
-                        Toast.LENGTH_SHORT
-                    ).show()
                 }
+
+                //si on a pu d'actifs, on désactive le tnjouer et les radio button
+                if(intActifs<5){
+
+                    rbCinqDollars.isEnabled = false;
+                    btnJouer.isEnabled = false;
+                }
+                if(intActifs<2){
+
+                    rbDeuxDollars.isEnabled = false;
+                 //   btnJouer.isEnabled = false;
+                }
+                if(intActifs<1){
+                   // btnJouer.isEnabled = false;
+                    rbUnDollar.isEnabled = false;
+                }
+
+
+
             }
 
         }
@@ -153,10 +191,30 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     fun radio_button_click(view: View) {
         val radio: RadioButton = findViewById(rGroup.checkedRadioButtonId)
-        Toast.makeText(
-            applicationContext, "On click : ${radio.text}",
-            Toast.LENGTH_SHORT
-        ).show()
+
+        if(radio.text=="1$"){
+     //   Toast.makeText(
+         //   applicationContext, "On click : ${radio.text}",
+         //   Toast.LENGTH_SHORT
+       // ).show()
+        btnJouer.isEnabled = true;
+    }
+        if(radio.text=="2$"){
+          //  Toast.makeText(
+           //     applicationContext, "On click : ${radio.text}",
+           //     Toast.LENGTH_SHORT
+          //  ).show()
+            btnJouer.isEnabled = true;
+        }
+        if(radio.text=="5$"){
+        //    Toast.makeText(
+            //    applicationContext, "On click : ${radio.text}",
+             //   Toast.LENGTH_SHORT
+           // ).show()
+           // btnJouer.isEnabled = true;
+        }
+
+
     }
 
 }
