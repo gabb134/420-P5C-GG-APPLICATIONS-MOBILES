@@ -1,7 +1,9 @@
 package com.example.laboratoire3
 
+import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.util.Log
 import android.view.View
 import android.widget.RadioButton
@@ -27,7 +29,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         R.drawable.windows
     )
     var intCodeSecet: Int = 123;
-    var intActifs: Int = 10;
+    var intActifs: Int = 100;
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
@@ -45,6 +47,20 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         )
 
     }
+   /* override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
+        super.onSaveInstanceState(outState, outPersistentState)
+        Log.i("MainActivity ", "dans ${object {}.javaClass.enclosingMethod.name}")
+        Toast.makeText(this, "dans ${object {}.javaClass.enclosingMethod.name}",Toast.LENGTH_LONG).show()
+
+
+
+    }
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        Log.i("MainActivity ", "dans ${object {}.javaClass.enclosingMethod.name}")
+        Toast.makeText(this, "dans ${object {}.javaClass.enclosingMethod.name}",Toast.LENGTH_LONG).show()
+
+    }*/
 
     fun onClickCodeSecret(view: View){
         val action = intent.action;
@@ -77,14 +93,16 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         }
 
     }
-    fun onclickCasseCous(view: View){
+
+    fun casseCocher(argentGagnerUn: Int,argentGagnerDeux: Int,argentGagnerCinq: Int ,random: Int){//voir comment faire
 
     }
 
 
-
     override fun onClick(view: View?) {
+
         when (view) {
+
             btnJouer -> {
                 // faire apparaitre les images aléatoirement...
                 val action = intent.action;
@@ -107,12 +125,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
 
                     if (radio.text == "1$") {//pour une mise de 1$
-                     //   Toast.makeText(
-                          //  applicationContext, "Mise de 1$",
-                        //    Toast.LENGTH_SHORT
-                      //  ).show()
-                        //Log.i( action, " Numero aléatoire : ${lstImage[number1]}  et ${lstImage[number2]}");
-                        // dblActifs = dblActifs+1 ;
+                        if(cbCasseCou.isChecked){
+                            Toast.makeText(applicationContext, "case est coché!", Toast.LENGTH_SHORT).show()
+                        }
+                        else{
+                            Toast.makeText(applicationContext, "case n'est pas coché!", Toast.LENGTH_SHORT).show()
+                           // casseCocher(argent: Int,random: Int)
+
+                        }
 
                         if (lstImage[number1] == lstImage[number2] && lstImage[number1] == lstImage[number3] && lstImage[number3] == lstImage[number2]) {
                             intActifs += 25;
@@ -125,7 +145,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                         } else {
                             Log.i(action, " Aucun pareil, valeurs de intActifs : ${intActifs}")
                             intActifs -= 1;
-                        //    Toast.makeText(applicationContext, "Perdu ${1}$",Toast.LENGTH_SHORT).show()
+                            //    Toast.makeText(applicationContext, "Perdu ${1}$",Toast.LENGTH_SHORT).show()
                         }
 
 
@@ -141,7 +161,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                         } else {
                             Log.i(action, " Aucun pareil, valeurs de intActifs : ${intActifs}")
                             intActifs -= 2;
-                          //  Toast.makeText(applicationContext, "Perdu ${2}$",Toast.LENGTH_SHORT).show()
+                            //  Toast.makeText(applicationContext, "Perdu ${2}$",Toast.LENGTH_SHORT).show()
                         }
 
                     } else {//pour une mise de 5$
@@ -149,7 +169,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                         if (lstImage[number1] == lstImage[number2] && lstImage[number1] == lstImage[number3] && lstImage[number3] == lstImage[number2]) {
                             intActifs += 250;
                             Log.i(action, " 3 pareils, valeurs de intActifs : ${intActifs}")
-                               Toast.makeText(applicationContext, "Gangné ${250}$",Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, "Gangné ${250}$",Toast.LENGTH_SHORT).show()
                         } else if (lstImage[number1] == lstImage[number2] || lstImage[number1] == lstImage[number3] || lstImage[number3] == lstImage[number2]) {
                             intActifs += 5;
                             Log.i(action," Au moins 2 pareils, valeurs de intActifs : ${intActifs}")
@@ -157,7 +177,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                         } else {
                             Log.i(action, " Aucun pareil, valeurs de intActifs : ${intActifs}")
                             intActifs -= 5;
-                           // Toast.makeText(applicationContext, "Perdu ${5}$",Toast.LENGTH_SHORT).show()
+                            // Toast.makeText(applicationContext, "Perdu ${5}$",Toast.LENGTH_SHORT).show()
                         }
                     }
                     //Toast.makeText(applicationContext,"On button click : ${radio.text}",
@@ -168,16 +188,20 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 if(intActifs<5){
 
                     rbCinqDollars.isEnabled = false;
+                    rbCinqDollars.isChecked = false;
+                  //  btnJouer.isEnabled = false;
                     btnJouer.isEnabled = false;
                 }
                 if(intActifs<2){
 
                     rbDeuxDollars.isEnabled = false;
-                 //   btnJouer.isEnabled = false;
+                    //   btnJouer.isEnabled = false;
+                    btnJouer.isEnabled = false;
                 }
                 if(intActifs<1){
-                   // btnJouer.isEnabled = false;
+                    // btnJouer.isEnabled = false;
                     rbUnDollar.isEnabled = false;
+                    btnJouer.isEnabled = false;
                 }
 
 
@@ -185,6 +209,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
 
         }
+
+
         txtActifs.text = intActifs.toString() + "$" //affichage de l'actifs apres avoir miser
     }
 
@@ -212,6 +238,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
              //   Toast.LENGTH_SHORT
            // ).show()
            // btnJouer.isEnabled = true;
+            btnJouer.isEnabled = true;
         }
 
 
