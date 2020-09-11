@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_contextuel_option1"
+        android:title="@string/menu_contextuel_option1">
+    </item>
+    <group android:id="@+id/group1"
+        android:checkableBehavior="single">
+    <item android:id="@+id/menu_contextuel_option2"
+        android:checked="true"
+        android:title="@string/menu_contextuel_option2">
+    </item>
+    <item android:id="@+id/menu_contextuel_option3"
+        android:title="@string/menu_contextuel_option3">
+    </item>
+    </group>
+    <group android:id="@+id/group2"
+    android:checkableBehavior="all">
+        <item android:id="@+id/menu_contextuel_option4"
+            android:checked="true"
+            android:title="@string/menu_contextuel_option4">
+        </item>
+        <item android:id="@+id/menu_contextuel_option5"
+            android:title="@string/menu_contextuel_option5">
+
+        </item>
+    </group>
+</menu>

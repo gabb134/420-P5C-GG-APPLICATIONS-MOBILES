@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">GGToolbarNomPrenom</string>
     <string name="txtMenuEtToolbar">Menu et Toolbar</string>
-    <string name="menu_toolbar_settings">Settings</string>
+    <string name="menu_toolbar_settings">Paramètre</string>
     <string name="menu_toolbar_profile">Profil</string>
     <string name="menu_toolbar_share">Partager</string>
     <string name="menu_toolbar_add">Ajouter</string>
@@ -12,4 +12,9 @@
     <string name="option1">option 1</string>
     <string name="option1_1">option1.1</string>
     <string name="option1_2">option1.2</string>
+    <string name="menu_contextuel_option1">Option 1</string>
+    <string name="menu_contextuel_option2">Option 2</string>
+    <string name="menu_contextuel_option3">Option 3</string>
+    <string name="menu_contextuel_option4">Option 4</string>
+    <string name="menu_contextuel_option5">Option 5</string>
 </resources>
