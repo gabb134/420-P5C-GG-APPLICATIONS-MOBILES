@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">GGToolbarNomPrenom</string>
+    <string name="txtMenuEtToolbar">Menu et Toolbar</string>
+    <string name="menu_toolbar_settings">Settings</string>
+    <string name="menu_toolbar_profile">Profil</string>
+    <string name="menu_toolbar_share">Partager</string>
+    <string name="menu_toolbar_add">Ajouter</string>
+    <string name="menu_toolbar_help">Aide</string>
+    <string name="cliquezIcone">Cliquez sur les iôcnes ou textes de la barre d\'outils pour tester les différentes options</string>
+    <string name="appuyez">appuyez assez longuement ici pour faire apparaître le menu contextuel.</string>
+    <string name="menu_selectionne">Item de menu %s sélectionné</string>
+    <string name="option1">option 1</string>
+    <string name="option1_1">option1.1</string>
+    <string name="option1_2">option1.2</string>
+</resources>
