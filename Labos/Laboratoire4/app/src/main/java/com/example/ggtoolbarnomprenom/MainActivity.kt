@@ -1,5 +1,6 @@
 package com.example.ggtoolbarnomprenom
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.ContextMenu
@@ -37,6 +38,8 @@ class MainActivity : AppCompatActivity() {
             (ggtoolbar as Toolbar).title -> {
 
                 Toast.makeText(this, "Vous avez cliqué sur l’icône de la barre d’outils", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, Main2Activity::class.java)
+                startActivityForResult(intent, 1)
             }
         }
         return super.onOptionsItemSelected(item)
