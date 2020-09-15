@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">GGLaboratoire5</string>
+    <string name="textEnHaut">Services, notifications et récepteurs d\'événements</string>
+    <string name="demarrer">DÉMARRER</string>
+    <string name="Arreter">ARRÊTER</string>
+    <string name="StopSelf">STOP SELF</string>
+    <string name="Connecter">CONNECTER</string>
+    <string name="AjouterNotification">AJOUTER NOTIFICATION</string>
+    <string name="EnvoyerEvenement">ENVOYER UN ÉVÉNEMENT</string>
+    <string name="textMilieu">Appuyer sur le butrton ci-dessous pour envoyer un événement à un recepteur d\'événements</string>
+    <string name="notification_titre">test notification</string>
+    <string name="notification_text">Un clic ouvre l’activité Notification</string>
+    <string name="notification_erreur">Erreur notification</string>
+    <string name="notification_ajoutee">Notification ajoutée</string>
+    <string name="titreNotif">Notification</string>
+    <string name="notification_service_titre">Le service TestService est démarré</string>
+    <string name="notification_service_text">Cette notification ne peut être supprimée par l’utilisateur</string>
+    <string name="reception_evenement">Évènement reçu</string>
+</resources>
