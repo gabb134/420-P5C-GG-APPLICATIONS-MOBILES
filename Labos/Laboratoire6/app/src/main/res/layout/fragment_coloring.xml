@@ -28,4 +28,14 @@
         android:layout_marginTop="50dp"
         android:spinnerMode="dialog" />
 
+    <Button
+        android:id="@+id/btnReplaceFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/btn_change_fragment_txt"
+        android:visibility="gone" />
+
 </FrameLayout>

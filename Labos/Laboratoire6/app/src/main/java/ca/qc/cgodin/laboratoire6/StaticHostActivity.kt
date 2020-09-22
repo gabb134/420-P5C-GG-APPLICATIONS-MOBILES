@@ -6,7 +6,8 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.fragment_coloring.*
 
-class MainActivity : AppCompatActivity(), ColoringFragment.OnColoringFragmentInteractionListener,
+class StaticHostActivity : AppCompatActivity(),
+    ColoringFragment.OnColoringFragmentInteractionListener,
     ColoredFragment.OnColoredFragmentInteractionListener {
 
     private lateinit var coloringFragment: ColoringFragment
@@ -22,6 +23,8 @@ class MainActivity : AppCompatActivity(), ColoringFragment.OnColoringFragmentInt
             supportFragmentManager.findFragmentById(R.id.coloringFragment) as ColoringFragment
         coloredFragment =
             supportFragmentManager.findFragmentById(R.id.coloredFragment) as ColoredFragment
+
+        //  setContentView(R.layout.activity_main)
 
     }
 
@@ -60,36 +63,27 @@ class MainActivity : AppCompatActivity(), ColoringFragment.OnColoringFragmentInt
         Log.i(javaClass.simpleName, "onSendColorFragmentInteraction")
 
 
-        if(couleur=="Bleu"){
-
+        if (couleur == "Bleu") {
             coloredFragment.setLayoutBackgroundColor(Color.BLUE)
-        }
-        else if(couleur=="Rouge"){
+        } else if (couleur == "Rouge") {
             coloredFragment.setLayoutBackgroundColor(Color.RED)
-        }
-        else if(couleur=="Vert"){
+        } else if (couleur == "Vert") {
             coloredFragment.setLayoutBackgroundColor(Color.GREEN)
-        }
-
-        else if(couleur=="Jaune"){
+        } else if (couleur == "Jaune") {
             coloredFragment.setLayoutBackgroundColor(Color.YELLOW)
-        }
-
-        else if(couleur=="Cyan"){
+        } else if (couleur == "Cyan") {
             coloredFragment.setLayoutBackgroundColor(Color.CYAN)
-        }
-
-        else if(couleur=="Noir"){
+        } else if (couleur == "Noir") {
             coloredFragment.setLayoutBackgroundColor(Color.BLACK)
-        }
-
-        else if(couleur=="Gris"){
+        } else if (couleur == "Gris") {
             coloredFragment.setLayoutBackgroundColor(Color.GRAY)
         }
 
 
         // coloredFragment.setLayoutBackgroundColor(bgColor)
     }
+
+    override fun onChangeFragment() {}
 
     override fun onSendTextFragmentInteraction(message: String) {
         textViewReponse.text = message;

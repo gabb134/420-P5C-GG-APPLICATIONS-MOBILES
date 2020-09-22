@@ -15,4 +15,8 @@
         <item>Rose</item>
         <item>Mauve</item>
     </string-array>
+
+    <string name="StaticFragments">GO TO STATIC FRAGMENTS</string>
+    <string name="DynamicFragments">GO TO DYNAMIC FRAGMENTS</string>
+    <string name="btn_change_fragment_txt">Change fragment</string>
 </resources>

@@ -33,6 +33,9 @@ class ColoringFragment : Fragment() {
     private lateinit var coloringFragmentLayout1: View
 
     private lateinit var spinner: Spinner
+
+    private lateinit var btnReplace: Button
+
     var tabCouleurs = arrayOf("Rouge", "Bleu", "Vert", "Jaune", "Gris", "Cyan", "Noir")
 //    val couleurs = resources.getStringArray(R.array.Couleurs)
 
@@ -40,6 +43,11 @@ class ColoringFragment : Fragment() {
 
     interface OnColoringFragmentInteractionListener {
         fun onSendColorFragmentInteraction(couleur: String)
+        fun onChangeFragment()
+    }
+
+    fun enableReplaceFragmentButton() {
+        btnReplace.visibility = View.VISIBLE
     }
 
 
@@ -112,68 +120,74 @@ class ColoringFragment : Fragment() {
                 }
             }
         }
+        btnReplace = coloringFragmentLayout.findViewById<Button>(R.id.btnReplaceFragment)
 
-
-    coloringFragmentLayout1 = inflater.inflate(
-    R.layout.fragment_coloring,
-    container, false
-    )
-
-    return coloringFragmentLayout
-}
-
-override fun onActivityCreated(savedInstanceState: Bundle?) {
-    Log.i("ColoringFragment ", "dans ${object {}.javaClass.enclosingMethod.name}")
-    super.onActivityCreated(savedInstanceState)
-}
-
-override fun onStart() {
-    Log.i("ColoringFragment ", "dans ${object {}.javaClass.enclosingMethod.name}")
-    super.onStart()
-}
-
-override fun onPause() {
-    Log.i("ColoringFragment ", "dans ${object {}.javaClass.enclosingMethod.name}")
-    super.onPause()
-}
-
-override fun onStop() {
-    Log.i("ColoringFragment ", "dans ${object {}.javaClass.enclosingMethod.name}")
-    super.onStop()
-}
-
-override fun onDestroyView() {
-    Log.i("ColoringFragment ", "dans ${object {}.javaClass.enclosingMethod.name}")
-    super.onDestroyView()
-}
-
-override fun onDestroy() {
-    Log.i("ColoringFragment ", "dans ${object {}.javaClass.enclosingMethod.name}")
-    super.onDestroy()
-}
-
-override fun onDetach() {
-    Log.i("ColoringFragment ", "dans ${object {}.javaClass.enclosingMethod.name}")
-    super.onDetach()
-}
-
-companion object {
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment ColoringFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    @JvmStatic
-    fun newInstance(param1: String, param2: String) =
-        ColoringFragment().apply {
-            arguments = Bundle().apply {
-                putString(ARG_PARAM1, param1)
-                putString(ARG_PARAM2, param2)
-            }
+        btnReplace.setOnClickListener {
+            mListener.onChangeFragment()
+            btnReplace.isEnabled = false
         }
-}
+
+
+        coloringFragmentLayout1 = inflater.inflate(
+            R.layout.fragment_coloring,
+            container, false
+        )
+
+        return coloringFragmentLayout
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        Log.i("ColoringFragment ", "dans ${object {}.javaClass.enclosingMethod.name}")
+        super.onActivityCreated(savedInstanceState)
+    }
+
+    override fun onStart() {
+        Log.i("ColoringFragment ", "dans ${object {}.javaClass.enclosingMethod.name}")
+        super.onStart()
+    }
+
+    override fun onPause() {
+        Log.i("ColoringFragment ", "dans ${object {}.javaClass.enclosingMethod.name}")
+        super.onPause()
+    }
+
+    override fun onStop() {
+        Log.i("ColoringFragment ", "dans ${object {}.javaClass.enclosingMethod.name}")
+        super.onStop()
+    }
+
+    override fun onDestroyView() {
+        Log.i("ColoringFragment ", "dans ${object {}.javaClass.enclosingMethod.name}")
+        super.onDestroyView()
+    }
+
+    override fun onDestroy() {
+        Log.i("ColoringFragment ", "dans ${object {}.javaClass.enclosingMethod.name}")
+        super.onDestroy()
+    }
+
+    override fun onDetach() {
+        Log.i("ColoringFragment ", "dans ${object {}.javaClass.enclosingMethod.name}")
+        super.onDetach()
+    }
+
+    companion object {
+        /**
+         * Use this factory method to create a new instance of
+         * this fragment using the provided parameters.
+         *
+         * @param param1 Parameter 1.
+         * @param param2 Parameter 2.
+         * @return A new instance of fragment ColoringFragment.
+         */
+        // TODO: Rename and change types and number of parameters
+        @JvmStatic
+        fun newInstance(param1: String, param2: String) =
+            ColoringFragment().apply {
+                arguments = Bundle().apply {
+                    putString(ARG_PARAM1, param1)
+                    putString(ARG_PARAM2, param2)
+                }
+            }
+    }
 }
