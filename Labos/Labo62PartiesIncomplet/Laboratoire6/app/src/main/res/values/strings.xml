@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Laboratoire6</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Remerciements">Remerciements</string>
+    <string name="reponse"></string>
+    <string name="selected_item">Selected item:</string>
+
+    <string-array name="Couleurs">
+        <item>Rouge</item>
+        <item>Bleu</item>
+        <item>Vert</item>
+        <item>Jaune</item>
+        <item>Orange</item>
+        <item>Rose</item>
+        <item>Mauve</item>
+    </string-array>
+
+    <string name="StaticFragments">GO TO STATIC FRAGMENTS</string>
+    <string name="DynamicFragments">GO TO DYNAMIC FRAGMENTS</string>
+    <string name="btn_change_fragment_txt">Change fragment</string>
+</resources>

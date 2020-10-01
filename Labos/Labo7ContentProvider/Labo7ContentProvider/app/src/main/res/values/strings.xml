@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Content Provider</string>
+    <string name="btnRechercherTxt">Rechercher</string>
+    <string name="btnAddContactTxt">Ajouter Contact</string>
+</resources>

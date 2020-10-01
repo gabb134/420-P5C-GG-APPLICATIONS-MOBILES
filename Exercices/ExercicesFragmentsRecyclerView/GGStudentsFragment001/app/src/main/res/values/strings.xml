@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">GGStudentFragment</string>
+    <string name="student_title_hint">Enter a title for the student.</string>
+    <string name="student_title_label">Title</string>
+    <string name="student_details_label">Details</string>
+    <string name="good_student_label">Good Student</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

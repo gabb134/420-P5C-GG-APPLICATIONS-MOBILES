@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">GG5PALaboratoire7</string>
+    <string name="btnActivitePref">ACTIVITES PREFERENCES</string>
+    <string name="btnActiviteFichier">ACTIVITES FICHIER</string>
+    <string name="btnActiviteBD">ACTIVITES BASE DE DONNEES</string>
+    <string name="nomActivitePref">Shared Preferences</string>
+    <string name="nomUtilisateur">Nom Utilisateur</string>
+    <string name="rbHomme">Homme</string>
+    <string name="rbFemme">Femme</string>
+    <string name="btnSauvegarder">SAUVEGARDER</string>
+    <string name="nomActiviteFichier">Lecture/Écriture d\'un fichier</string>
+    <string name="btnEcrireFichier">ECRIRE DANS FICHIER</string>
+    <string name="btnLireFichier">LIRE LE FICHIER</string>
+    <string name="hintFichier">Saisissez les données à insérer dans le fichier.</string>
+    <string name="nomActiviteBd">Activité Base de données</string>
+</resources>

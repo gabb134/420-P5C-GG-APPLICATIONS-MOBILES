@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "C:\\Users\\GabrielMarrero\\Documents\\420-P5C-GG-APPLICATIONS-MOBILES-Ronald\\Labos\\StudentDataManagement\\StudentDataManagement\\app\\build\\intermediates\\res\\merged\\debug\\layout_student_item.xml.flat",
+        "source": "C:\\Users\\GabrielMarrero\\Documents\\420-P5C-GG-APPLICATIONS-MOBILES-Ronald\\Labos\\StudentDataManagement\\StudentDataManagement\\app\\src\\main\\res\\layout\\student_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\GabrielMarrero\\Documents\\420-P5C-GG-APPLICATIONS-MOBILES-Ronald\\Labos\\StudentDataManagement\\StudentDataManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\GabrielMarrero\\Documents\\420-P5C-GG-APPLICATIONS-MOBILES-Ronald\\Labos\\StudentDataManagement\\StudentDataManagement\\app\\src\\main\\res\\drawable-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\GabrielMarrero\\Documents\\420-P5C-GG-APPLICATIONS-MOBILES-Ronald\\Labos\\StudentDataManagement\\StudentDataManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\GabrielMarrero\\Documents\\420-P5C-GG-APPLICATIONS-MOBILES-Ronald\\Labos\\StudentDataManagement\\StudentDataManagement\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\GabrielMarrero\\Documents\\420-P5C-GG-APPLICATIONS-MOBILES-Ronald\\Labos\\StudentDataManagement\\StudentDataManagement\\app\\build\\intermediates\\res\\merged\\debug\\layout_main.xml.flat",
+        "source": "C:\\Users\\GabrielMarrero\\Documents\\420-P5C-GG-APPLICATIONS-MOBILES-Ronald\\Labos\\StudentDataManagement\\StudentDataManagement\\app\\src\\main\\res\\layout\\main.xml"
+    },
+    {
+        "merged": "C:\\Users\\GabrielMarrero\\Documents\\420-P5C-GG-APPLICATIONS-MOBILES-Ronald\\Labos\\StudentDataManagement\\StudentDataManagement\\app\\build\\intermediates\\res\\merged\\debug\\layout_student_item2.xml.flat",
+        "source": "C:\\Users\\GabrielMarrero\\Documents\\420-P5C-GG-APPLICATIONS-MOBILES-Ronald\\Labos\\StudentDataManagement\\StudentDataManagement\\app\\src\\main\\res\\layout\\student_item2.xml"
+    },
+    {
+        "merged": "C:\\Users\\GabrielMarrero\\Documents\\420-P5C-GG-APPLICATIONS-MOBILES-Ronald\\Labos\\StudentDataManagement\\StudentDataManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\GabrielMarrero\\Documents\\420-P5C-GG-APPLICATIONS-MOBILES-Ronald\\Labos\\StudentDataManagement\\StudentDataManagement\\app\\src\\main\\res\\drawable-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\GabrielMarrero\\Documents\\420-P5C-GG-APPLICATIONS-MOBILES-Ronald\\Labos\\StudentDataManagement\\StudentDataManagement\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\GabrielMarrero\\Documents\\420-P5C-GG-APPLICATIONS-MOBILES-Ronald\\Labos\\StudentDataManagement\\StudentDataManagement\\app\\src\\main\\res\\drawable-ldpi\\ic_launcher.png"
+    }
+]
