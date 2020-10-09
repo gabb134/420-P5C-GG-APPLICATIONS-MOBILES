@@ -38,68 +38,85 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
     <LinearLayout
-            android:orientation="horizontal"
+            android:id="@+id/linearLayout"
             android:layout_width="0dp"
-            android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:id="@+id/linearLayout" app:layout_constraintTop_toBottomOf="@+id/idTb">
+            android:layout_marginEnd="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/idTb">
+
         <LinearLayout
-                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" android:layout_weight="1">
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
             <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:inputType="textEmailAddress"
-                    android:ems="10"
                     android:id="@+id/emailAddress"
-                    android:hint="Courriel"
-                    android:layout_weight="1"/>
-            <EditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:inputType="textPersonName"
+                    android:layout_weight="1"
                     android:ems="10"
-                    android:id="@+id/prenom"
-                    android:hint="Prenom"
-                    android:layout_marginEnd="8dp" android:layout_weight="1"/>
+                    android:hint="Courriel"
+                    android:inputType="textEmailAddress" />
+
             <EditText
+                    android:id="@+id/prenom"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Prenom"
+                    android:inputType="textPersonName" />
+
+            <EditText
+                    android:id="@+id/phoneNumber"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="phone"
                     android:ems="10"
-                    android:id="@+id/phoneNumber"
                     android:hint="Telephone"
-            />
+                    android:inputType="phone" />
+
             <Button
-                    android:text="Modifier"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
                     android:id="@+id/modifierBtn"
-                    android:layout_weight="1" android:visibility="invisible" android:onClick="onModifierClick"/>
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="onModifierClick"
+                    android:text="Modifier"
+                    android:visibility="invisible" />
         </LinearLayout>
+
         <LinearLayout
-                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" android:layout_weight="1">
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
             <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:inputType="textPersonName"
-                    android:ems="10"
                     android:id="@+id/emailType"
-                    android:hint="Type de courriel"
-                    android:layout_weight="1"/>
-            <EditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:inputType="textPersonName"
+                    android:layout_weight="1"
                     android:ems="10"
+                    android:hint="Type de courriel"
+                    android:inputType="textPersonName" />
+
+            <EditText
                     android:id="@+id/nom"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:ems="10"
                     android:hint="Nom"
-                    android:layout_marginEnd="8dp" android:layout_weight="1"/>
+                    android:inputType="textPersonName" />
 
             <Button
                     android:id="@+id/btnAddContact"
@@ -108,14 +125,18 @@
                     android:layout_weight="1"
                     android:onClick="onAjouterClick"
                     android:text="@string/btnAddContactTxt" />
+
             <Button
-                    android:text="Supprimer"
+                    android:id="@+id/supprimerBtn"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/supprimerBtn"
-                    android:layout_weight="1" android:visibility="invisible" android:onClick="onSupprimerClick"/>
+                    android:layout_weight="1"
+                    android:onClick="onSupprimerClick"
+                    android:text="Supprimer"
+                    android:visibility="invisible" />
         </LinearLayout>
     </LinearLayout>
+
     <LinearLayout
             android:orientation="horizontal"
             android:layout_width="0dp"

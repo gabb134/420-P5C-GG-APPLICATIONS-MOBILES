@@ -3,5 +3,6 @@
 
     <string name="hello">StudentDBManagementActivity!</string>
     <string name="app_name">Manipulation de données locales - SQLite</string>
+    <string name="btnEnregistrer">Enregistrer</string>
 
 </resources>

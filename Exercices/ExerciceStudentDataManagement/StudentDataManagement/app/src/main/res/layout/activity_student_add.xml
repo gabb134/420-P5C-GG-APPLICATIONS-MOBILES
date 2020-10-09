@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StudentAdd">
+
+    <LinearLayout
+        android:layout_width="291dp"
+        android:layout_height="425dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/tvPrenom"
+            android:layout_width="285dp"
+            android:layout_height="39dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Prenom"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/tvnom"
+            android:layout_width="287dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Nom"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/tvCourriel"
+            android:layout_width="287dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Courriel"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/tvTelephone"
+            android:layout_width="287dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Téléphone"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/tvNomUsager"
+            android:layout_width="287dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Nom usager"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/tvMotDePasse"
+            android:layout_width="287dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Mot de passe"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/btnEnregistrer"
+            android:layout_width="288dp"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="@string/btnEnregistrer1" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

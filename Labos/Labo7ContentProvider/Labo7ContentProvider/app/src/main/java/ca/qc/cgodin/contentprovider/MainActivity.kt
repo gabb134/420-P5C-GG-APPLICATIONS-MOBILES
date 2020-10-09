@@ -53,12 +53,12 @@ class MainActivity : AppCompatActivity() {
                         arrayOf(Manifest.permission.WRITE_CONTACTS),123)
                 } else {
 
-                    val ops = ArrayList<ContentProviderOperation>()
+                    val ops = ArrayList<ContentProviderOperation>() //arraylist
 
-                    var op = ContentProviderOperation.newInsert(ContactsContract.RawContacts.CONTENT_URI)
+                    var op = ContentProviderOperation.newInsert(ContactsContract.RawContacts.CONTENT_URI) //ici on lui dit quon va jouter des contacts
                         .withValue(ContactsContract.RawContacts.ACCOUNT_TYPE, null)
                         .withValue(ContactsContract.RawContacts.ACCOUNT_NAME, null)
-                    ops.add(op.build())
+                    ops.add(op.build()) //On ajoute dans le arraylist
 
                     op = ContentProviderOperation.newInsert(ContactsContract.Data.CONTENT_URI)
                         .withValueBackReference(ContactsContract.Data.RAW_CONTACT_ID, 0)
@@ -67,7 +67,7 @@ class MainActivity : AppCompatActivity() {
                         .withValue(ContactsContract.CommonDataKinds.StructuredName.DISPLAY_NAME, prenom.text.toString() + " " + nom.text.toString())
                         .withValue(ContactsContract.CommonDataKinds.StructuredName.FAMILY_NAME, nom.text.toString())
                         .withValue(ContactsContract.CommonDataKinds.StructuredName.GIVEN_NAME, prenom.text.toString())
-                    ops.add(op.build())
+                    ops.add(op.build())//On ajoute dans le arraylist
 
                     op = ContentProviderOperation.newInsert(ContactsContract.Data.CONTENT_URI)
                         .withValueBackReference(ContactsContract.Data.RAW_CONTACT_ID, 0)
@@ -75,7 +75,7 @@ class MainActivity : AppCompatActivity() {
                             ContactsContract.CommonDataKinds.Email.CONTENT_ITEM_TYPE)
                         .withValue(ContactsContract.CommonDataKinds.Email.ADDRESS, emailAddress.text.toString())
                         .withValue(ContactsContract.CommonDataKinds.Email.TYPE, emailType.text.toString())
-                    ops.add(op.build())
+                    ops.add(op.build())//On ajoute dans le arraylist
 
                     op = ContentProviderOperation.newInsert(ContactsContract.Data.CONTENT_URI)
                         .withValueBackReference(ContactsContract.Data.RAW_CONTACT_ID, 0)
@@ -83,7 +83,7 @@ class MainActivity : AppCompatActivity() {
                             ContactsContract.CommonDataKinds.Phone.CONTENT_ITEM_TYPE)
                         .withValue(ContactsContract.CommonDataKinds.Phone.NUMBER, phoneNumber.text.toString())
                         .withValue(ContactsContract.CommonDataKinds.Phone.TYPE, ContactsContract.CommonDataKinds.Phone.TYPE_MAIN)
-                    ops.add(op.build())
+                    ops.add(op.build())//On ajoute dans le arraylist
 
                     contentResolver.applyBatch(ContactsContract.AUTHORITY, ops)
 

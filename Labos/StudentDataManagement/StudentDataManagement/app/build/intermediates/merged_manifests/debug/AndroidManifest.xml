@@ -15,6 +15,13 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:testOnly="true" >
+        <activity android:name="ca.qc.cgodin.database.StudentAddToBD" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="ca.qc.cgodin.database.StudentDBManagementActivity"
             android:label="@string/app_name" >

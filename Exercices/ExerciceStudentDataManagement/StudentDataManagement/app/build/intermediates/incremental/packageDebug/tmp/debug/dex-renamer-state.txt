@@ -1,0 +1,7 @@
+#Fri Oct 02 16:23:04 EDT 2020
+base.0=C\:\\Users\\GabrielMarrero\\Documents\\420-P5C-GG-APPLICATIONS-MOBILES-Ronald\\Exercices\\ExerciceStudentDataManagement\\StudentDataManagement\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+path.1=classes.dex
+renamed.1=classes2.dex
+path.0=classes.dex
+renamed.0=classes.dex
+base.1=C\:\\Users\\GabrielMarrero\\Documents\\420-P5C-GG-APPLICATIONS-MOBILES-Ronald\\Exercices\\ExerciceStudentDataManagement\\StudentDataManagement\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex

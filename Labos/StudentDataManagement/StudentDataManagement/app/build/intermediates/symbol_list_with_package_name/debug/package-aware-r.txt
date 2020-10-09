@@ -900,6 +900,7 @@ id beginning
 id blocking
 id bottom
 id bounce
+id btnEnregistrer
 id buttonPanel
 id center
 id center_vertical
@@ -1111,6 +1112,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_student_add_to_b_d
 layout custom_dialog
 layout main
 layout notification_action
@@ -1153,6 +1155,7 @@ string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string app_name
+string btnEnregistrer
 string hello
 string search_menu_title
 string status_bar_notification_info_overflow

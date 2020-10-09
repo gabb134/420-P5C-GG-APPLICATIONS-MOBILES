@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">StudentDBManagementActivity!</string>
+    <string name="app_name">Manipulation de données locales - SQLite</string>
+    <string name="btnEnregistrer">Enregistrer</string>
+    <string name="new_student_txt">New Student</string>
+    <string name="btnEnregistrer1">ENREGISTRER</string>
+
+</resources>
