@@ -8,13 +8,14 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.main.*
 
 class StudentDBManagementActivity : Activity() {
     /** Called when the activity is first created.  */
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main)
-        val list = findViewById<View>(R.id.studentList2) as RecyclerView
+//        val list = findViewById<View>(R.id.studentList2) as RecyclerView
         val student1 = Student("Justin", "Trudeau", "jtrudeau@cgodin.qc.ca", "5141111111", "jtrudeau", "test")
         val student2 = Student("Stephen", "Harper", "sharper@cgodin.qc.ca", "5142222222", "sharper", "test")
         val student3 = Student("Philippe", "Couillard", "pcouillard@cgodin.qc.ca", "5143333333", "pcouillard", "test")
@@ -36,7 +37,7 @@ class StudentDBManagementActivity : Activity() {
 
         studentBdd.close()
         if (studentList != null) {
-            list.adapter = StudentRecyclerViewAdapter(studentList.toList())
+            studentList2.adapter = StudentRecyclerViewAdapter(studentList.toList())
         }
     }
 

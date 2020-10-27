@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/holo_orange_light"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/fullNameView"
+            style="@style/student_info"
+            android:layout_width="234dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_orange_light" />
+
+        <Button
+            android:id="@+id/btnSupprimerRec"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/btnSupprimer" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/phoneNumberView"
+        style="@style/student_info"
+        android:layout_width="234dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_orange_light" />
+
+</LinearLayout>

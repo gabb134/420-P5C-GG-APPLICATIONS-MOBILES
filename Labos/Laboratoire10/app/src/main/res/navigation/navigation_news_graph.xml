@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_news_graph"
+    app:startDestination="@id/breakingNewsFragment">
+
+    <fragment
+        android:id="@+id/breakingNewsFragment"
+        android:name="ca.qc.cgodin.gglabo10news.BreakingNewsFragment"
+        android:label="breaking_news_fragment"
+        tools:layout="@layout/breaking_news_fragment" >
+        <action
+            android:id="@+id/action_breakingNewsFragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/allnewsFragment"
+        android:name="ca.qc.cgodin.gglabo10news.AllNewsFragment"
+        android:label="all_news_fragment"
+        tools:layout="@layout/all_news_fragment" >
+        <action
+            android:id="@+id/action_allNewsFragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteNewsFragment"
+        android:name="ca.qc.cgodin.gglabo10news.FavoriteNewsFragment"
+        android:label="favorite_news_fragment"
+        tools:layout="@layout/favorite_news_fragment" >
+        <action
+            android:id="@+id/action_favoriteNewsFragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/articleFragment"
+        android:name="ca.qc.cgodin.gglabo10news.ArticleFragment"
+        android:label="article_fragment"
+        tools:layout="@layout/article_fragment" />
+</navigation>

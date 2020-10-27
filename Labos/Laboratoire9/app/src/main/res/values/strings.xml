@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">RoomStudent</string>
+    <string name="display_students">List of students</string>
+    <string name="action_settings">Settings</string>
+    <string name="hint_student">Student…</string>
+    <string name="hint_firstname">First name…</string>
+    <string name="hint_lastname">Last name…</string>
+    <string name="hint_phone_number">Phone number…</string>
+    <string name="hint_email">Email…</string>
+    <string name="buttonSave">Save</string>
+    <string name="empty_not_saved">Student not saved because it is empty.</string>
+    <string name="add_student">Add student</string>
+    <string name="effacer">Supprimer</string>
+    <string name="modifier">Modifier</string>
+    <string name="btnSupprimer">Supprimer</string>
+    <string name="btnRecherche">Recchercher</string>
+    <string name="infoStudent">Information sur l\'étudiant recherché</string>
+</resources>

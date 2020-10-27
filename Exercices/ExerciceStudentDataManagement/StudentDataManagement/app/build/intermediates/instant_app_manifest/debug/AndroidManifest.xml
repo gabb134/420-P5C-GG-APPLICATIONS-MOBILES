@@ -14,8 +14,7 @@
         android:debuggable="true"
         android:extractNativeLibs="false"
         android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
-        android:testOnly="true" >
+        android:label="@string/app_name" >
         <activity android:name="ca.qc.cgodin.database.StudentAdd" />
         <activity android:name="ca.qc.cgodin.database.StudentAddToBD" >
             <intent-filter>

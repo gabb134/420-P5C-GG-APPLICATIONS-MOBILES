@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Labo7ContentProviderRecyclerView</string>
+    <string name="btnDisplayContactsTxt">Display Contacts</string>
+    <string name="btnContactTxt">Display Contacts</string>
+    <string name="btnMediaTxt">Display Songs</string>
+    <string name="supprimer">Supprimer</string>
+
+</resources>
