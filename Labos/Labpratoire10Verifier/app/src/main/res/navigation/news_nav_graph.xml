@@ -2,39 +2,39 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/navigation_news_graph"
+    android:id="@+id/news_nav_graph"
     app:startDestination="@id/breakingNewsFragment">
 
     <fragment
         android:id="@+id/breakingNewsFragment"
-        android:name="ca.qc.cgodin.gglabo10news.BreakingNewsFragment"
-        android:label="breaking_news_fragment"
-        tools:layout="@layout/breaking_news_fragment" >
+        android:name="ca.qc.cgodin.laboratoire10.BreakingNewsFragment"
+        android:label="@string/hello_breaking_news_fragment"
+        tools:layout="@layout/breaking_news_fragment">
         <action
             android:id="@+id/action_breakingNewsFragment_to_articleFragment"
             app:destination="@id/articleFragment" />
     </fragment>
     <fragment
-        android:id="@+id/allnewsFragment"
-        android:name="ca.qc.cgodin.gglabo10news.AllNewsFragment"
-        android:label="all_news_fragment"
-        tools:layout="@layout/all_news_fragment" >
+        android:id="@+id/allNewsFragment"
+        android:name="ca.qc.cgodin.laboratoire10.AllNewsFragment"
+        android:label="@string/hello_search_news_fragment"
+        tools:layout="@layout/all_news_fragment">
         <action
             android:id="@+id/action_allNewsFragment_to_articleFragment"
             app:destination="@id/articleFragment" />
     </fragment>
     <fragment
-        android:id="@+id/favoriteNewsFragment"
-        android:name="ca.qc.cgodin.gglabo10news.FavoriteNewsFragment"
-        android:label="favorite_news_fragment"
-        tools:layout="@layout/favorite_news_fragment" >
+        android:id="@+id/savedNewsFragment"
+        android:name="ca.qc.cgodin.laboratoire10.SavedNewsFragment"
+        android:label="@string/hello_saved_news_fragment"
+        tools:layout="@layout/saved_news_fragment">
         <action
-            android:id="@+id/action_favoriteNewsFragment_to_articleFragment"
+            android:id="@+id/action_savedNewsFragment_to_articleFragment"
             app:destination="@id/articleFragment" />
     </fragment>
     <fragment
         android:id="@+id/articleFragment"
-        android:name="ca.qc.cgodin.gglabo10news.ArticleFragment"
-        android:label="article_fragment"
+        android:name="ca.qc.cgodin.laboratoire10.ArticleFragment"
+        android:label="@string/hello_article_fragment"
         tools:layout="@layout/article_fragment" />
 </navigation>

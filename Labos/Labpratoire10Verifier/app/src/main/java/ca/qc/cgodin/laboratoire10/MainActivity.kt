@@ -1,4 +1,4 @@
-package ca.qc.cgodin.gglabo10news
+package ca.qc.cgodin.laboratoire10
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,7 +10,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         bottomNavigationView.setupWithNavController(navHostFragmentContainer.findNavController())
 
     }
