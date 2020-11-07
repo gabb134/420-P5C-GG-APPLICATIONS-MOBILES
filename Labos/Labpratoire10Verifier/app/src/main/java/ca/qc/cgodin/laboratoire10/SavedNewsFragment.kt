@@ -6,9 +6,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.navGraphViewModels
 
 class SavedNewsFragment : Fragment() {
-
+    private val newsViewModel: NewsViewModel by
+    navGraphViewModels(R.id.news_nav_graph)
     companion object {
         fun newInstance() = SavedNewsFragment()
     }

@@ -36,5 +36,9 @@
         android:id="@+id/articleFragment"
         android:name="ca.qc.cgodin.laboratoire10.ArticleFragment"
         android:label="@string/hello_article_fragment"
-        tools:layout="@layout/article_fragment" />
+        tools:layout="@layout/article_fragment" >
+        <argument
+            android:name="article"
+            app:argType="models.Article" />
+    </fragment>
 </navigation>

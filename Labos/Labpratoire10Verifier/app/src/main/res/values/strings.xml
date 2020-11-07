@@ -7,5 +7,10 @@
     <string name="hello_saved_news_fragment">Hello from saved news fragment</string>
     <string name="hello_search_news_fragment">Hello from search news fragment</string>
     <string name="hello_article_fragment">Hello from article fragment</string>
+    <string name="cover_image_txt">"image "</string>
+    <string name="allNews">Chercher des articles</string>
+    <string name="chercher">Chercher</string>
+    <string name="RechercheArticle">Recherche article</string>
+    <string name="btnRechercher">Rechercher</string>
 
 </resources>
