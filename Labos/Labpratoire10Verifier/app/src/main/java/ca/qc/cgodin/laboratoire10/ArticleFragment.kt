@@ -1,16 +1,18 @@
 package ca.qc.cgodin.laboratoire10
 
-import androidx.lifecycle.ViewModelProviders
+import android.content.Intent.getIntent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.webkit.WebView
 import android.webkit.WebViewClient
+import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import androidx.navigation.navGraphViewModels
 import kotlinx.android.synthetic.main.article_fragment.*
+import kotlinx.android.synthetic.main.article_fragment.fab
+import kotlinx.android.synthetic.main.article_fragment.view.*
 
 class ArticleFragment : Fragment() {
 
@@ -39,11 +41,21 @@ class ArticleFragment : Fragment() {
 
        // webView = requireView().findViewById(R.id.webView)
 
+
+
+
         val article = args.article
         webView.apply {
             webViewClient = WebViewClient()
             loadUrl(article.url)
+
+          //  Toast.makeText(context, "nom du titre : ${article.title}", Toast.LENGTH_SHORT).show()
         }
+        fab.setOnClickListener {
+             //newsViewModel.insert(article)
+            Toast.makeText(context, "Cet article a été ajouté dans la base de données!", Toast.LENGTH_SHORT).show()
+        }
+
 
     }
 

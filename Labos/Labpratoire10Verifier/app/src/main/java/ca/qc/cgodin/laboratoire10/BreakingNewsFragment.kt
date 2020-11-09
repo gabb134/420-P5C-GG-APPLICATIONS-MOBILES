@@ -1,5 +1,6 @@
 package ca.qc.cgodin.laboratoire10
 
+import android.app.Application
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.util.Log

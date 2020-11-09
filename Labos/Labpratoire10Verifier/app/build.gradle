@@ -62,9 +62,16 @@ dependencies {
     //Coroutines Lifecycle Scopes
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
 
+    //Composants Kotlin
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.9"
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9"
+
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+
+    //Kotlin Extensions and Coroutines support for Room
+    implementation 'androidx.room:room-ktx:2.2.5'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
