@@ -1,8 +1,10 @@
 package ca.qc.cgodin.laboratoire10
 import android.app.Application
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import models.Article
 import models.ArticleDao
@@ -17,6 +19,7 @@ class NewsViewModel(private val newsRepository: NewsRepository): ViewModel() {
     val breakingNews: MutableLiveData<NewsResponse> = MutableLiveData()
 
     val allNews :MutableLiveData<NewsResponse> = MutableLiveData()
+    val allSavedNews: LiveData<List<Article>>
 
     init {
         getBreakingNews("ca")
@@ -24,6 +27,7 @@ class NewsViewModel(private val newsRepository: NewsRepository): ViewModel() {
         //val articleDao = ArticleRoomDatabase.getDatabase(application,viewModelScope).articleDao()
 
         //savedNewsRepository = SavedNewsRepository(articleDao)
+        allSavedNews = newsRepository.allSavedNews
 
 
     }
@@ -43,9 +47,9 @@ class NewsViewModel(private val newsRepository: NewsRepository): ViewModel() {
         }
 
     }
-   /* fun insert(article: Article) = viewModelScope.launch {
-        savedNewsRepository.insert(article)
-    }*/
+    fun insert(article: Article) = viewModelScope.launch(Dispatchers.IO)  {
+        newsRepository.insert(article)
+    }
 
 
 

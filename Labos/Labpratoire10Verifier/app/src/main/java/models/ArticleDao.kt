@@ -6,8 +6,9 @@ import androidx.room.*
 
 @Dao
 interface ArticleDao {
-    @Query("SELECT * from article_table ORDER BY title ASC")
-    fun getArticles(): LiveData<List<Article>>
+    @Query("SELECT * from article_table ")
+    fun getAllArticles(): LiveData<List<Article>>
+
 
     @Query("SELECT * FROM article_table WHERE url=(:url)")
     fun getArticle(url: String): LiveData<Article?>

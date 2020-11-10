@@ -21,9 +21,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         bottomNavigationView.setupWithNavController(navHostFragmentContainer.findNavController())
 
-   //     val articleDao = ArticleRoomDatabase.getDatabase(applicationContext,viewModelScope).articleDao()
+        val articleDao = ArticleRoomDatabase.getDatabase(application).articleDao()
 
-        val newsRepository = NewsRepository()
+        val newsRepository = NewsRepository(articleDao)
         val viewModelProviderFactory = BreakingNewsFragment.BreakingNewsViewModelProviderFactory(newsRepository)
         try {
             val viewModelProvider = ViewModelProvider(

@@ -36,15 +36,15 @@ class AllNewsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         newsAdapter = NewsAdapter()
+  /*      newsAdapter = NewsAdapter()
         rvAllNews.adapter = newsAdapter
         newsViewModel.breakingNews.observe(
             viewLifecycleOwner,
             Observer { newsResponse ->
                 newsAdapter.setArticles(newsResponse.articles)
             }
-        )
+        )*/
         btnRechercher.setOnClickListener {
 
 
@@ -53,6 +53,8 @@ class AllNewsFragment : Fragment() {
             if (titre == "") {
                 Toast.makeText(context, "Vous devez insérer un article à recherché!", Toast.LENGTH_SHORT).show()
             } else {
+
+                rvAllNews.adapter = newsAdapter
                 newsViewModel.getSearchNews(titre)
 
                 newsViewModel.allNews.observe(

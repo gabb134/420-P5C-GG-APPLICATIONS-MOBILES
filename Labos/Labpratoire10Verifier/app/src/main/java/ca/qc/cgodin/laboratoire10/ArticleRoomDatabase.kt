@@ -5,11 +5,13 @@ import androidx.room.Database
 
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
 import kotlinx.coroutines.CoroutineScope
 import models.Article
 import models.ArticleDao
 
 @Database(entities = arrayOf(Article::class), version = 1, exportSchema = false)
+@TypeConverters(Converters::class)
 abstract class ArticleRoomDatabase : RoomDatabase() {
     abstract fun articleDao(): ArticleDao
 
@@ -18,7 +20,7 @@ abstract class ArticleRoomDatabase : RoomDatabase() {
         @Volatile
         private var INSTANCE: ArticleRoomDatabase? = null
 
-        fun getDatabase(context: Context, viewModelScope: CoroutineScope): ArticleRoomDatabase {
+        fun getDatabase(context: Context): ArticleRoomDatabase {
             var tempInstance: ArticleRoomDatabase? = INSTANCE
             if (tempInstance != null) {
                 return tempInstance

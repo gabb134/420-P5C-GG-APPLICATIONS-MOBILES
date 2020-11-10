@@ -17,6 +17,7 @@ data class Article(
     val description: String,
     @SerializedName("publishedAt")
     val publishedAt: String,
+    @ColumnInfo(name = "source")
     @SerializedName("source")
     val source: Source,
     @SerializedName("title")

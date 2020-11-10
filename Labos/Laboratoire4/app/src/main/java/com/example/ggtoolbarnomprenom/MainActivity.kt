@@ -52,8 +52,11 @@ class MainActivity : AppCompatActivity() {
         info: ContextMenu.ContextMenuInfo?
     ) {
         when (v.id) {
+
             R.id.mainConstraintLayout -> menuInflater.inflate(R.menu.menu_contextuel, menu)
             else -> super.onCreateContextMenu(menu, v, info)
+
+
         }
     }
 

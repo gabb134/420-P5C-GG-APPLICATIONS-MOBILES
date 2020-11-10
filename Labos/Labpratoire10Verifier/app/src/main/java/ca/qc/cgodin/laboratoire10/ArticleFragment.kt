@@ -52,7 +52,7 @@ class ArticleFragment : Fragment() {
           //  Toast.makeText(context, "nom du titre : ${article.title}", Toast.LENGTH_SHORT).show()
         }
         fab.setOnClickListener {
-             //newsViewModel.insert(article)
+             newsViewModel.insert(article)
             Toast.makeText(context, "Cet article a été ajouté dans la base de données!", Toast.LENGTH_SHORT).show()
         }
 
