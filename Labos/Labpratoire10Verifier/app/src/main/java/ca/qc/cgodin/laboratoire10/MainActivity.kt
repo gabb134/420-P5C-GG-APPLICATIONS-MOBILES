@@ -12,6 +12,7 @@ import repository.NewsRepository
 class MainActivity : AppCompatActivity() {
 
     private lateinit var newsViewModel: NewsViewModel
+
     private val navController by lazy {
         findNavController(R.id.navHostFragmentContainer)
     }

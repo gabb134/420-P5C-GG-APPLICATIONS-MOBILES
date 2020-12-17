@@ -10,7 +10,7 @@ import kotlinx.coroutines.CoroutineScope
 import models.Article
 import models.ArticleDao
 
-@Database(entities = arrayOf(Article::class), version = 1, exportSchema = false)
+@Database(entities = arrayOf(Article::class), version = 1, exportSchema = false) //c<Est ici qu'on ajout dles autres table
 @TypeConverters(Converters::class)
 abstract class ArticleRoomDatabase : RoomDatabase() {
     abstract fun articleDao(): ArticleDao

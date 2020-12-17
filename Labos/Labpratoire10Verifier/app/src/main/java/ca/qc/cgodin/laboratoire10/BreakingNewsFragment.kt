@@ -22,6 +22,8 @@ class BreakingNewsFragment : Fragment() {
 
     private val newsViewModel: NewsViewModel by
     navGraphViewModels(R.id.news_nav_graph)
+
+
     companion object {
         fun newInstance() = BreakingNewsFragment()
     }

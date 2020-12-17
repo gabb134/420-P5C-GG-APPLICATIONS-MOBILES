@@ -3,34 +3,23 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/menu_toolbar_settings"
-        android:icon="@drawable/ic_baseline_adb_24"
-        android:title="@string/menu_toolbar_settings"
-        app:showAsAction="ifRoom" />
-    <item android:id="@+id/menu_toolbar_profile"
-        android:icon="@drawable/ic_baseline_account_circle_24"
-        android:title="@string/menu_toolbar_profile"
-        app:showAsAction="ifRoom" />
-    <item android:id="@+id/menu_toolbar_share"
-        android:icon="@drawable/ic_share_24px"
-        android:title="@string/menu_toolbar_share"
+        android:id="@+id/menu_toolbar_site"
+        android:icon="@drawable/ic_baseline_web_24"
+        android:title="@string/Email"
         app:showAsAction="always" />
-    <item android:id="@+id/menu_toolbar_add"
-        android:icon="@drawable/ic_baseline_add_circle_outline_24"
-        android:title="@string/menu_toolbar_add"
+    <item
+        android:id="@+id/menu_toolbar_toast"
+        android:icon="@drawable/ic_baseline_adb_24"
+        android:title="@string/Toast"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menu_toolbar_email"
+        android:icon="@drawable/ic_baseline_email_24"
+        android:title="@string/Email"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/menu_toolbar_call"
+        android:icon="@drawable/ic_baseline_call_24"
+        android:title="@string/Call"
         app:showAsAction="always|collapseActionView" />
-    <item android:id="@+id/menu_toolbar_help"
-        android:icon="@drawable/ic_baseline_settings_24"
-        android:title="@string/menu_toolbar_help"
-        app:showAsAction="collapseActionView" />
-    <item android:title="@string/option1"
-        android:id="@+id/menu_toolbar_option1"
-        app:showAsAction="never">
-        <menu>
-            <item android:title="@string/option1_1"
-                android:id="@+id/menu_toolbar_option1_1"/>
-            <item android:title="@string/option1_2"
-                android:id="@+id/menu_toolbar_option1_2"/>
-        </menu>
-    </item>
 </menu>

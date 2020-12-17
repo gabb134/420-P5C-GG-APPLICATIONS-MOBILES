@@ -37,6 +37,8 @@ class StudentViewModel(application: Application) : AndroidViewModel(application)
     fun getStudentByPhoneNumber(phoneNumber: String)  = viewModelScope.launch(Dispatchers.IO) {
         repository.getStudentByPhoneNumber(phoneNumber)
     }
+
+
     fun updateStudent(student: Student)  = viewModelScope.launch(Dispatchers.IO) {
         repository.updateStudent(student)
     }

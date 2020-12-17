@@ -19,4 +19,7 @@
     <string name="menu_contextuel_option5">Option 5</string>
     <string name="retour">RETOUR</string>
     <string name="deuxiemeActivite">Vous êtes à la deuxième activité. Cliquez sur le bouton Retour pour aller à l\'activité parente.</string>
+    <string name="Call">Call</string>
+    <string name="Email">Email</string>
+    <string name="Toast">Toast</string>
 </resources>
